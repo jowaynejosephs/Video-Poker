@@ -1,0 +1,32 @@
+var Card = (function(){
+
+function Card(name){
+    this.name=name;
+   this.value = getCardValue(name);
+    this.suit= getCardSuit(name);
+}
+
+function getCardValue(name){
+    if(name[0]==='1' || name[0]==='J' || name[0]==='Q'||name[0]==='K') return 10
+    if (name[0]==='A') return 11;
+
+    return parseInt(name[0])
+}
+
+function getCardSuit(name){
+    var suit =name[name.length-1];
+
+    if (suit==='H') return 'Hearts'
+    if (suit==='D') return 'Diamonds'
+    if (suit==='C') return 'Clubs'
+    return 'Spades'
+}
+
+
+
+
+
+
+
+    return Card
+})();
