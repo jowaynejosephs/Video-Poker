@@ -7,10 +7,13 @@ function Card(name){
 }
 
 function getCardValue(name){
-    if(name[0]==='1' || name[0]==='J' || name[0]==='Q'||name[0]==='K') return 10
-    if (name[0]==='A') return 11;
+    if(name[0]==='1') return 10
+     if(name[0]==='J')return 11
+      if(name[0]==='Q')return 12
+      if(name[0]==='K') return 13
+    if (name[0]==='A') return 14;
 
-    return parseInt(name[0])
+    return parseInt(name[0]);
 }
 
 function getCardSuit(name){
