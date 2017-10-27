@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
 
         <div class="container">
+            <button id="play" class="btn btn-primary">PLAY</button>
+           <p>Place bet here!</p><input type="text" name="bet" value="5" size="10"></imput>
+            <div id="cardfield">
+
+                <img class="cardImage" src="img/back.png" id="cardOne">
+                <img class="cardImage" src="img/back.png" id="cardTwo">
+                <img class="cardImage" src="img/back.png" id="cardThree">
+                <img class="cardImage" src="img/back.png" id="cardFour">
+                <img class="cardImage" src="img/back.png" id="cardFive">
+               
+            </div>
             </div>
 
     <script src="card.js"></script>
@@ -16,11 +29,14 @@
    <script src="deck.js"></script>
    <script src="player.js"></script>
    <script src="game.js"></script>
+   
 <script>
 
-
-    var deck= new Deck(true);
-    var hand=new Hand(deck.deal(5));
+    var game =new Game();   
+    game.play() 
+    console.log(game);
+    // var deck= new Deck(true);
+    var hand=new Hand(game.deck.deal(5));
     var cards=[];
     
 
