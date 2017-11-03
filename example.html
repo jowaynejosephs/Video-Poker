@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Poker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Are you feeling Lucky?</h1>
+        <button id="deal" disabled class="btn btn-primary">DEAL</button>
+        <p>Place bet here!</p><input type="number" id="bet" value="5" size="10"></imput>
+    </div>
+</div>
+
+    <div class="bg">
+        <div class="container">
+            <!-- <input type="text" id="bank" readonly="readonly" name="money" value="1000" size="1000"> -->
+            
+            <div id="winner" class="alert"></div>
+        </div>
+    
+
+
+    <div id="cardfield">
+
+        <img class="cardImages" src="img/back.png" id="cardOne">
+        <img class="cardImages" src="img/back.png" id="cardTwo">
+        <img class="cardImages" src="img/back.png" id="cardThree">
+        <img class="cardImages" src="img/back.png" id="cardFour">
+        <img class="cardImages" src="img/back.png" id="cardFive">
+
+    </div>
+
+    </div>
+</div>
+
+
+
+    <script>
+        // alert("Please turn off your add blocker :)")
+        document.getElementById("bet").addEventListener("click", function (event) {
+            document.getElementById("deal").removeAttribute("disabled");
+        });
+
+      
+    </script>
+
+    <script src="card.js"></script>
+    <script src="hand.js"></script>
+    <script src="deck.js"></script>
+    <script src="player.js"></script>
+    <script src="game.js"></script>
+
+    <script>
+        var card = new Card(name)
+
+
+        // var hand = new Hand([
+        //     new Card('JH'),
+        //     new Card('JC'),
+        //     new Card('3S'),
+        //     new Card('2C'),
+        //     new Card('6H')
+        // ]);
+
+
+        // console.log(hand);
+        // console.log(hand.getBestHand());
+
+        var game = new Game();
+        game.play();
+    </script>
+
+</body>
+
+</html>
